@@ -12,7 +12,8 @@ export class MapComponent implements OnInit {
     @Input() lon: number;
 
     title = 'Ubicacion de Agencias bcp';
-    position = { lat: this.lat, lng: this.lon }; //  lat: -11.990757, lng: -77.07969 
+    // position = { lat: this.lat, lng: this.lon };
+    position = { lat: -11.990757, lng: -77.07969 };
     zoom = 15;
     label = { color: 'red' , text: 'marcador'};
 

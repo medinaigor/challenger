@@ -9,7 +9,7 @@ import { AgencyService } from './agency/commons/http/agencies.services';
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentsModule } from './agency/commons/components/components.module';
 import { ReactiveFormsModule } from '@angular/forms';
-// import { GoogleMapsModule } from '@angular/google-maps';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AccordionModule.forRoot(),
     BrowserAnimationsModule,
     ComponentsModule,
-    // GoogleMapsModule
+    GoogleMapsModule
   ],
   providers: [AgencyService],
   bootstrap: [AppComponent],

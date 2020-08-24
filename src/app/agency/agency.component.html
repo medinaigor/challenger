@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row" *ngIf="showList">
-        <div class="col-10">
+        <div class="col-12">
             <h3>Agencias</h3>
             <div class="card" *ngFor="let item of listAgencies">
                 <div class="row card-horizontal" (click)="getDetail(item)">
@@ -23,7 +23,7 @@
             <app-form-agency [agency]="form" (dataForm)="saveForm($event)"></app-form-agency>
         </div>
         <div class="col-6">
-            <!-- <app-map [lat]="latitud" [lon]="longitud"></app-map> -->
+            <app-map [lat]="latitud" [lon]="longitud"></app-map>
         </div>
     </div>
 

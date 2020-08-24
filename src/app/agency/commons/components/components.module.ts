@@ -3,22 +3,28 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormAgencyComponent } from './form-agency/form-agency.component';
 import { MapComponent } from './map/map.component';
-// import { GoogleMapsModule } from '@angular/google-maps';
+import { GoogleMapsModule } from '@angular/google-maps';
+
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
     FormAgencyComponent,
-    // MapComponent
+    MapComponent
   ],
   imports: [
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
-    // GoogleMapsModule
+    GoogleMapsModule,
+
+    AgmCoreModule.forRoot({
+      apiKey: ''
+    })
   ],
   exports: [
     FormAgencyComponent,
-    // MapComponent
+    MapComponent
 
   ],
 })
