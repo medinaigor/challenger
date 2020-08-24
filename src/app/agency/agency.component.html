@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row" *ngIf="showList">
+        <div class="col-10">
+            <h3>Agencias</h3>
+            <div class="card" *ngFor="let item of listAgencies">
+                <div class="row card-horizontal" (click)="getDetail(item)">
+                    <div class="avatar">
+                        <img src="../../assets/img/bcp-{{item.imagen}}.png" alt="Card">
+                    </div>
+                    <div class="col-8">
+                        <p class="pull-left float-center">Agencia {{item.id}}</p>
+                        <p class="pull-left float-center">Agencia {{item.distrito}}</p>
+                        <span>{{item.provincia}}</span>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+
+    </div>
+    <div class="row" *ngIf="!showList">
+        <div class="col-4">
+            <app-form-agency [agency]="form" (dataForm)="saveForm($event)"></app-form-agency>
+        </div>
+        <div class="col-6">
+            <!-- <app-map [lat]="latitud" [lon]="longitud"></app-map> -->
+        </div>
+    </div>
+
+
+</div>

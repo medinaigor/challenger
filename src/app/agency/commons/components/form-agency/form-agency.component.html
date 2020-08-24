@@ -1,0 +1,27 @@
+<h3>Formulario</h3>
+
+<br>
+<form [formGroup]="presenter.createformAgency" >
+    <div class="form-group">
+        <label for="agencia">Nombre Agencia</label>
+        <input type="text" class="form-control"  formControlName="ctrlagencia" name="ctrlagencia" placeholder="Agencia">
+    </div>
+    <div class="form-group">
+        <label for="direccion">Dirección</label>
+        <input type="text" class="form-control" formControlName="ctrldireccion" name="ctrldireccion" placeholder="Dirección">
+    </div>
+    <div class="form-group">
+        <label for="distrito">Distrito</label>
+        <input type="text" class="form-control" formControlName="ctrldistrito" name="ctrldistrito" placeholder="Distrito">
+    </div>
+    <div class="form-group">
+        <label for="latitud">Latitud</label>
+        <input type="text" class="form-control" formControlName="ctrllongitud" name="ctrllongitud" placeholder="Latitud">
+    </div>
+    <div class="form-group">
+        <label for="longitud">Longitud</label>
+        <input type="text" class="form-control" formControlName="ctrllatitud" name="ctrllatitud" placeholder="Longitud">
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()" [disabled]="!presenter.createformAgency.valid">Actualizar</button>
+</form>
